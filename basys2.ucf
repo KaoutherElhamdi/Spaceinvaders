@@ -1,0 +1,137 @@
+#__________________________________________________________________________
+#|	 JA o o o o o o    JB o o o o o o   JC o o o o o o    JD o o o o o o   |
+#|     B A J B G V       C B C B G V	   A B A C G V       C A C D G V   |
+#|     2 3 3 5 N C       6 6 5 7 N C      9 9 1 9 N C       1 1 1 1 N C   |
+#|             D C               D C          0   D C       2 3 3 2 D C   |
+#|                                                                        |
+#|  Status                                                                |
+#|  []                                                                    |
+#|                                        Cathodes                        |
+#|       M                         cg = M12  L14   dp = N13               |
+#|   M   1   P   P   N   N   P   G            _        _      _      _    |
+#|	  5   1   7   6   5   4   4   1      L13  |_| H1   |_|    |_|    |_|   |
+#|   []  []  []  []  []  []  []  []     P12  |_| N14  |_|    |_|    |_|   |
+#|LD 0   1   2   3   4   5   6   7	         N11                          |
+#|                                                                        |
+#|                                    Anodes AN0      AN1    AN2    AN3   |
+#|	                                          F12      J12    M13    K14   |
+#|                                                                        |
+#|   P                                                                    |
+#|   N   E   F   G   B   K   L   P          G     C                       |
+#|	 3   2   3   3   4   3   3   11          1     1     M     A           |
+#|  ||  ||  ||  ||  ||  ||  ||  ||          2     1     4     7           |
+#|  ||  ||  ||  ||  ||  ||  ||  ||         |O|   |O|   |O|   |O|          |
+#|SW 7   6   5   4   3   2   1   0      BTN 0     1     2     3           |
+#|________________________________________________________________________|
+#
+
+
+## clock pins for Basys2 Board
+NET "clk" LOC = "B8"; # Bank = 0, Signal name = MCLK
+#NET "uclk" LOC = "M6"; # Bank = 2, Signal name = UCLK
+#NET "clk"    CLOCK_DEDICATED_ROUTE = FALSE;
+#NET "uclk" CLOCK_DEDICATED_ROUTE = FALSE;
+
+
+## Pin assignment for EppCtl
+## Connected to Basys2 onBoard USB controller
+#NET "EppAstb" LOC = "F2"; # Bank = 3
+#NET "EppDstb" LOC = "F1"; # Bank = 3
+#NET "EppWR"   LOC = "C2"; # Bank = 3
+#
+#NET "EppWait" LOC = "D2"; # Bank = 3
+#
+#
+#NET "EppDB<0>" LOC = "N2"; # Bank = 2
+#NET "EppDB<1>" LOC = "M2"; # Bank = 2
+#NET "EppDB<2>" LOC = "M1"; # Bank = 3
+#NET "EppDB<3>" LOC = "L1"; # Bank = 3
+#NET "EppDB<4>" LOC = "L2"; # Bank = 3
+#NET "EppDB<5>" LOC = "H2"; # Bank = 3
+#NET "EppDB<6>" LOC = "H1"; # Bank = 3
+#NET "EppDB<7>" LOC = "H3"; # Bank = 3
+
+
+## Broches de l'afficheur 7 segments et point décimal à 4 digits
+## Cathodes communes des Leds des Afficheurs 7 segments
+#NET "ca" LOC = "L14"; # Bank = 1, Signal name = CA
+#NET "cb" LOC = "H12"; # Bank = 1, Signal name = CB
+#NET "cc" LOC = "N14"; # Bank = 1, Signal name = CC
+#NET "cd" LOC = "N11"; # Bank = 2, Signal name = CD
+#NET "ce" LOC = "P12"; # Bank = 2, Signal name = CE
+#NET "cf" LOC = "L13"; # Bank = 1, Signal name = CF
+#NET "cg" LOC = "M12"; # Bank = 1, Signal name = CG
+## et du point décimal
+#NET "dp" LOC = "N13"; # Bank = 1, Signal name = DP
+
+## Anodes des afficheurs 7 segments
+#NET "AN3" LOC = "K14"; # Bank = 1, Signal name = AN3
+#NET "AN2" LOC = "M13"; # Bank = 1, Signal name = AN2
+#NET "AN1" LOC = "J12"; # Bank = 1, Signal name = AN1
+#NET "AN0" LOC = "F12"; # Bank = 1, Signal name = AN0
+
+## Broches des 8 LEDs
+#NET "LD7" LOC = "G1" ;  # Bank = 3, Signal name = LD7
+#NET "LD6" LOC = "P4" ;  # Bank = 2, Signal name = LD6
+#NET "LD5" LOC = "N4" ;  # Bank = 2, Signal name = LD5
+#NET "LD4" LOC = "N5" ;  # Bank = 2, Signal name = LD4
+#NET "LD3" LOC = "P6" ;  # Bank = 2, Signal name = LD3
+#NET "LD2" LOC = "P7" ;  # Bank = 3, Signal name = LD2
+#NET "LD1" LOC = "M11" ; # Bank = 2, Signal name = LD1
+NET "victory" LOC = "M5" ;  # Bank = 2, Signal name = LD0
+
+## Pin assignment for SWs
+#NET "SW7" LOC = "N3";  # Bank = 2, Signal name = SW7
+#NET "SW6" LOC = "E2";  # Bank = 3, Signal name = SW6
+#NET "SW5" LOC = "F3";  # Bank = 3, Signal name = SW5
+#NET "SW4" LOC = "G3";  # Bank = 3, Signal name = SW4
+#NET "SW3" LOC = "B4";  # Bank = 3, Signal name = SW3
+#NET "SW2" LOC = "K3";  # Bank = 3, Signal name = SW2
+#NET "SW1" LOC = "L3";  # Bank = 3, Signal name = SW1
+#NET "SW0" LOC = "P11"; # Bank = 2, Signal name = SW0
+
+## Boutons poussoirs
+NET "left" LOC = "A7";  # Bank = 1, Signal name = BTN3
+NET "right" LOC = "M4";  # Bank = 0, Signal name = BTN2
+NET "fire" LOC = "C11"; # Bank = 2, Signal name = BTN1
+NET "reset" LOC = "G12"; # Bank = 0, Signal name = BTN0
+
+## Loop back/demo signals
+## Pin assignment for PS2
+#NET "PS2C"    LOC = "B1"   | DRIVE = 2  | PULLUP ; # Bank = 3, Signal name = PS2C
+#NET "PS2D"    LOC = "C3"   | DRIVE = 2  | PULLUP ; # Bank = 3, Signal name = PS2D
+
+## Pin assignment for VGA
+NET "hSync"   LOC = "J14"  | DRIVE = 2  | PULLUP ; # Bank = 1, Signal name = HSYNC
+NET "vSync"   LOC = "K13"  | DRIVE = 2  | PULLUP ; # Bank = 1, Signal name = VSYNC
+#
+NET "rgb<7>"    LOC = "F13"  | DRIVE = 2  | PULLUP ; # Bank = 1, Signal name = RED2
+NET "rgb<6>"    LOC = "D13"  | DRIVE = 2  | PULLUP ; # Bank = 1, Signal name = RED1
+NET "rgb<5>"    LOC = "C14"  | DRIVE = 2  | PULLUP ; # Bank = 1, Signal name = RED0
+NET "rgb<4>"  LOC = "G14"  | DRIVE = 2  | PULLUP ; # Bank = 1, Signal name = GRN2
+NET "rgb<3>"  LOC = "G13"  | DRIVE = 2  | PULLUP ; # Bank = 1, Signal name = GRN1 
+NET "rgb<2>"  LOC = "F14"  | DRIVE = 2  | PULLUP ; # Bank = 1, Signal name = GRN0 
+NET "rgb<1>"   LOC = "J13"  | DRIVE = 2  | PULLUP ; # Bank = 1, Signal name = BLU2
+NET "rgb<0>"   LOC = "H13"  | DRIVE = 2  | PULLUP ; # Bank = 1, Signal name = BLU1 
+                       
+## Loop Back only tested signals
+#NET "JA1" LOC = "B2"  | DRIVE = 2 ; # | PULLUP ; # Bank = 1, Signal name = JA1   PIO<72
+#NET "JA2" LOC = "A3"  | DRIVE = 2 ; # | PULLUP ; # Bank = 1, Signal name = JA2   PIO<73
+#NET "JA3" LOC = "J3"  | DRIVE = 2 ; # | PULLUP ; # Bank = 1, Signal name = JA3   PIO<74
+#NET "JA4" LOC = "B5"  | DRIVE = 2 ; # | PULLUP ; # Bank = 1, Signal name = JA4   PIO<75
+#                                                                                 
+#NET "JB1" LOC = "C6"  | DRIVE = 2 ; # | PULLUP ; # Bank = 1, Signal name = JB1   PIO<76
+#NET "JB2" LOC = "B6"  | DRIVE = 2 ; # | PULLUP ; # Bank = 1, Signal name = JB2   PIO<77
+#NET "JB3" LOC = "C5"  | DRIVE = 2 ; # | PULLUP ; # Bank = 1, Signal name = JB3   PIO<78
+#NET "JB4" LOC = "B7"  | DRIVE = 2 ; # | PULLUP ; # Bank = 1, Signal name = JB4   PIO<79
+#                                                                                 
+#NET "JC1" LOC = "A9"  | DRIVE = 2 ; # | PULLUP ; # Bank = 1, Signal name = JC1   PIO<80
+#NET "JC2" LOC = "B9"  | DRIVE = 2 ; # | PULLUP ; # Bank = 1, Signal name = JC2   PIO<81
+#NET "JC3" LOC = "A10" | DRIVE = 2 ; # | PULLUP ; # Bank = 1, Signal name = JC3   PIO<82
+#NET "JC4" LOC = "C9"  | DRIVE = 2 ; # | PULLUP ; # Bank = 1, Signal name = JC4   PIO<83
+#                                                                                 
+#NET "JD1" LOC = "C12" | DRIVE = 2 ; # | PULLUP ; # Bank = 1, Signal name = JD1   PIO<84
+#NET "JD2" LOC = "A13" | DRIVE = 2 ; # | PULLUP ; # Bank = 2, Signal name = JD2   PIO<85
+#NET "JD3" LOC = "C13" | DRIVE = 2 ; # | PULLUP ; # Bank = 1, Signal name = JD3   PIO<86
+#NET "JD4" LOC = "D12" | DRIVE = 2 ; # | PULLUP ; # Bank = 2, Signal name = JD4   PIO<87
+#
