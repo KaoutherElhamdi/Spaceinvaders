@@ -15,3 +15,8 @@ balayés
 Naturellement, vous aurez également besoin de modules diviseurs de fréquences afin de gérer la vitesse de
 déplacement des objets à l’écran. Le diviseur de fréquence sera à ajouter au projet et plusieurs instances pourront
 être réalisées dans le module d’intégration.  
+
+![VideoCapture_20191209-210919](https://user-images.githubusercontent.com/52625036/70469358-2c2b3800-1ac9-11ea-9383-a616c7c00617.jpg)
+![VideoCapture_20191209-210934](https://user-images.githubusercontent.com/52625036/70469359-2cc3ce80-1ac9-11ea-9b20-3cbc8fd4f011.jpg)
+![VideoCapture_20191209-210847](https://user-images.githubusercontent.com/52625036/70469360-2cc3ce80-1ac9-11ea-95c5-38e5f650b4f3.jpg)
+![VideoCapture_20191209-210912](https://user-images.githubusercontent.com/52625036/70469361-2cc3ce80-1ac9-11ea-82f2-4b593700bb9f.jpg)
